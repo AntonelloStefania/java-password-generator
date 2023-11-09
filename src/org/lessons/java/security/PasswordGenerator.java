@@ -12,6 +12,9 @@ public class PasswordGenerator {
 		System.out.print("Inserisci il tuo cognome: ");
 		String surname = in.nextLine();
 		
+		System.out.print("Inserisci il tuo colore preferito: ");
+		String color = in.nextLine();
+		
 		System.out.print("Inserisci il tuo giorno di nascita: ");
 		String dayOfBirth = in.nextLine();
 		int day = Integer.valueOf(dayOfBirth);
@@ -24,9 +27,11 @@ public class PasswordGenerator {
 		String yearOfBirth = in.nextLine();
 		int year = Integer.valueOf(yearOfBirth);
 		
+		in.close();
+		
 		int dateSum = day + month + year;
 		
 		
-		System.out.println("la tua password è: " + name + "-" + surname + "-" + dateSum);
+		System.out.println("la tua password è: " + name + "-" + surname + "-" + color + "-" + dateSum);
 }
 }
